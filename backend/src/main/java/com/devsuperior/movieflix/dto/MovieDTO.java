@@ -10,8 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class MovieDTO implements Serializable {
@@ -22,6 +21,7 @@ public class MovieDTO implements Serializable {
     private String imgUrl;
     private String synopsis;
 
-    private GenreDTO genre;
+    private Long genreId;
     private List<Review> reviews = new ArrayList<>();
+
 }

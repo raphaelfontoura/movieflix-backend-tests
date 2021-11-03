@@ -1,6 +1,6 @@
 package com.devsuperior.movieflix.entities;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Data
 @Entity
 @Table(name = "tb_user")
-public class User implements Serializable, UserDetails {
+public class User implements UserDetails, Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
