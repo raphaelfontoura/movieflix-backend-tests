@@ -1,5 +1,6 @@
 package com.devsuperior.movieflix.dto;
 
+import com.devsuperior.movieflix.entities.Movie;
 import com.devsuperior.movieflix.entities.Review;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter @Setter
 @AllArgsConstructor
@@ -22,6 +24,16 @@ public class MovieDTO implements Serializable {
     private String synopsis;
 
     private Long genreId;
-    private List<Review> reviews = new ArrayList<>();
+    private List<ReviewDTO> reviews = new ArrayList<>();
 
+    public MovieDTO(Movie entity) {
+        this.id = entity.getId();
+        this.title = entity.getTitle();
+        this.subTitle = entity.getSubTitle();
+        this.year = entity.getYear();
+        this.imgUrl = entity.getImgUrl();
+        this.synopsis = entity.getSynopsis();
+        this.genreId = entity.getGenre().getId();
+        this.reviews = entity.getReviews().stream().map(ReviewDTO::new).collect(Collectors.toList());
+    }
 }

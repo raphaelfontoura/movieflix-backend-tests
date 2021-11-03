@@ -18,7 +18,6 @@ public class GenreDTO implements Serializable {
 
     private Long id;
     private String name;
-    private final Set<Movie> movies = new HashSet<>();
 
     public GenreDTO(Genre entity) {
         this.id = entity.getId();

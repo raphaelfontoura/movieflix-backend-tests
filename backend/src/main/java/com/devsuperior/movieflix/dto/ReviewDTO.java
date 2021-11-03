@@ -1,6 +1,7 @@
 package com.devsuperior.movieflix.dto;
 
 import com.devsuperior.movieflix.entities.Movie;
+import com.devsuperior.movieflix.entities.Review;
 import com.devsuperior.movieflix.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,7 +19,13 @@ import java.io.Serializable;
 public class ReviewDTO implements Serializable {
     private Long id;
     private String text;
-    private User user;
+    private String user;
     private Long movieId;
 
+    public ReviewDTO(Review entity) {
+        this.id = entity.getId();
+        this.text = entity.getText();
+        this.user = entity.getUser().getName();
+        this.movieId = entity.getMovie().getId();
+    }
 }
