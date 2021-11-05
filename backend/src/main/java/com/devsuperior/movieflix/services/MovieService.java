@@ -2,6 +2,7 @@ package com.devsuperior.movieflix.services;
 
 import com.devsuperior.movieflix.dto.MovieDTO;
 import com.devsuperior.movieflix.repositories.MovieRepository;
+import com.devsuperior.movieflix.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,7 +17,7 @@ public class MovieService {
 
     @Transactional(readOnly = true)
     public MovieDTO findById(Long id) {
-        var movie = repository.findById(id).orElseThrow();
+        var movie = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Movie not found."));
         return new MovieDTO(movie);
     }
 
