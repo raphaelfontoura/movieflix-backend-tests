@@ -27,9 +27,10 @@ public class MovieResource {
     public ResponseEntity<Page<MovieDTO>> findAllPaged(
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "size", defaultValue = "10") Integer size,
-            @RequestParam(value = "orderBy", defaultValue = "title") String orderBy) {
+            @RequestParam(value = "orderBy", defaultValue = "title") String orderBy,
+            @RequestParam(value = "genreId", defaultValue = "0") Long genreId) {
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, orderBy);
-        Page<MovieDTO> movieDTOPage = service.findAllPaged(pageRequest);
+        Page<MovieDTO> movieDTOPage = service.findAllPaged(pageRequest, genreId);
 
         return ResponseEntity.ok(movieDTOPage);
     }
