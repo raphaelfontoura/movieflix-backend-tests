@@ -3,11 +3,29 @@
   height: 68px;
   background-color: #FFC700;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-logo {
   font-weight: 700;
   font-size: 24px;
-  margin-left: 49px;
-  margin-top: 18px;
+  margin-left: 40px;
+}
+
+.navbar-logout {
+  width: 96px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logout-text {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
 }

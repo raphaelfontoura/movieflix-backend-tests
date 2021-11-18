@@ -7,7 +7,7 @@ function Navbar() {
         <h1>MovieFlix</h1>
       </div>
       <div className="navbar-logout">
-
+        <span className="navbar-logout-text">Sair</span>
       </div>
     </nav>
   )
