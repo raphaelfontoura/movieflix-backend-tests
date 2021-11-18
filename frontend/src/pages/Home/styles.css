@@ -1,0 +1,32 @@
+.home-container {
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.home-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 320px;
+}
+
+.home-presentation-title {
+  font-weight: 700;
+  color: #fff;
+  font-size: 48px;
+  margin:20px 0 20px 0;
+}
+
+.home-presentation-text {
+  color: #f2f2f2;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.home-presentation-img {
+  width: inherit;
+}
