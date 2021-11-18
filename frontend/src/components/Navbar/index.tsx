@@ -1,6 +1,6 @@
 import "./styles.css";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
