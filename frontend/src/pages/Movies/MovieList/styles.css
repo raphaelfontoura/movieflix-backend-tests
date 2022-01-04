@@ -1,7 +1,11 @@
+.movie-list-main {
+  padding: 40px 140px;
+}
+
 .movie-list-container {
   display: grid;
+  padding: 40px 0;
   grid-template-columns: repeat(auto-fill, 258px);
   justify-content: space-between;
-  padding: 40px 140px;
   gap: 25px;
 }
