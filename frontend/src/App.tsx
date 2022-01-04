@@ -1,14 +1,11 @@
-import React from 'react';
-import Home from 'pages/Home';
 
-import 'assets/css/reset.css';
-import 'assets/css/styles.css';
+import 'core/assets/css/reset.css';
+import 'core/assets/css/styles.css';
+import RoutesApp from 'Routes';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <RoutesApp />
   );
 }
 

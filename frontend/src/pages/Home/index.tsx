@@ -1,12 +1,12 @@
-import Navbar from '../../components/Navbar';
-import ImageHome from 'assets/img/home-image.svg';
+
+import ImageHome from 'core/assets/img/home-image.svg';
+import Login from 'core/components/Login';
 import "./styles.css";
-import Login from 'components/Login';
+
 
 function Home() {
   return (
     <>
-      <Navbar />
       <div className="home-container">
         <div className="home-presentation">
           <h1 className="home-presentation-title">

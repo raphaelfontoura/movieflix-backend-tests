@@ -19,9 +19,21 @@
   border: 1px solid #fefefe;
   border-radius: 4px;
   width: 384px;
-  height: 46px;
+  height: 50px;
   margin-bottom: 30px;
   font-size: 16px;
   color: #9e9e9e;
   padding-left: 12px;
+}
+
+.invalid-feedback {
+  display: inline-block;
+  color: red;
+  font-size: small;
+  align-self: flex-start;
+}
+
+.invalid-feedback h3 {
+  font-size: 16px;
+  font-weight: 400;
 }
