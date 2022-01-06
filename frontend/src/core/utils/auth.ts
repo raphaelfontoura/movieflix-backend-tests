@@ -1,6 +1,4 @@
 import jwtDecode from "jwt-decode";
-import { useNavigate } from "react-router-dom";
-import history from "./history";
 
 export const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? "movieflix";
 export const CLIENT_SECRET =

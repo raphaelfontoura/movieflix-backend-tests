@@ -1,3 +1,4 @@
+import MoviesListLoader from "core/components/Loaders/MoviesListLoader";
 import Pagination from "core/components/Pagination";
 import { Genre } from "core/models/Genre";
 import { MovieResponse } from "core/models/Movie";
@@ -25,13 +26,13 @@ const MoviesList = () => {
     setIsLoading(true);
     try {
       makePrivateRequest({ url: "/movies", params })
-      .then(
-        response => setMoviesResponse(response.data)
-      )
-      .finally(() => {
-        setIsLoading(false);
-      });
-    } catch(err) {
+        .then(
+          response => setMoviesResponse(response.data)
+        )
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } catch (err) {
       console.error(err);
     }
   }, [activePage, genre])
@@ -47,8 +48,13 @@ const MoviesList = () => {
 
   return (
     <div className="movie-list-main">
-      <GenreFilter genre={genre} handleChangeGenre={handleChangeGenre}/>
+      <GenreFilter genre={genre} handleChangeGenre={handleChangeGenre} />
+
       <div className="movie-list-container">
+        {isLoading && (
+          <MoviesListLoader />
+        )}
+
         {moviesReponse?.content.map(movie =>
           <Link to={`${movie.id}`} key={movie.id} >
             <MovieCard movie={movie} />
