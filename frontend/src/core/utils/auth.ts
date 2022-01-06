@@ -1,4 +1,5 @@
 import jwtDecode from "jwt-decode";
+import history from "./history";
 
 export const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? "movieflix";
 export const CLIENT_SECRET =
@@ -11,7 +12,7 @@ type LoginResponse = {
   token_type: string;
 };
 
-export type Role = "ROLE_VISITOR" | "ROLE_ADMIN";
+export type Role = "ROLE_VISITOR" | "ROLE_MEMBER";
 
 type AccessToken = {
   exp: number;
@@ -60,4 +61,5 @@ export const isAllowedByRole = (routeRoles: Role[] = []) => {
 
 export const logout = () => {
   localStorage.removeItem("authData");
+  history.replace("/");
 };

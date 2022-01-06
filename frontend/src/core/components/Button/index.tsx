@@ -2,11 +2,12 @@ import "./styles.css";
 
 type Props = {
   label: string;
+  onClick?: () => void;
 }
 
-const Button = ({ label }: Props) => {
+const Button = ({ label, onClick }: Props) => {
   return (
-    <button className="button-default">
+    <button className="button-default" onClick={onClick}>
       {label}
     </button>
   )

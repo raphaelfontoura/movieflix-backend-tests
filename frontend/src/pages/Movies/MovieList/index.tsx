@@ -7,6 +7,7 @@ import MovieCard from "../Card";
 import GenreFilter from "../Filter";
 import "./styles.css"
 
+
 const MoviesList = () => {
 
   const [moviesReponse, setMoviesResponse] = useState<MovieResponse>();

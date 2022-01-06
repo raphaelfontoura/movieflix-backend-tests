@@ -1,6 +1,6 @@
 
 import ImageHome from 'core/assets/img/home-image.svg';
-import Login from 'core/components/Login';
+import Login from 'pages/Home/Login';
 import "./styles.css";
 
 

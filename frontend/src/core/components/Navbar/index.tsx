@@ -2,7 +2,7 @@ import './styles.css';
 
 import { getAccessTokenDecoded, logout } from 'core/utils/auth';
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -23,7 +23,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h1>MovieFlix</h1>
+        <Link to={"/movies"}>
+          <h1>MovieFlix</h1>
+        </Link>
       </div>
       <div onClick={handleLogout} className={`navbar-logout ${username ? "" : "display-none"}`}>
         <span className="navbar-logout-text">Sair</span>
