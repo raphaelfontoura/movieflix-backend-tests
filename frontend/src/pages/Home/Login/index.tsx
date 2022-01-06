@@ -28,6 +28,7 @@ const Login = () => {
       })
       .catch(() => {
         setHasError(true);
+        navigate("/");
       })
   }
 

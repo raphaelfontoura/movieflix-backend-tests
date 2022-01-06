@@ -1,3 +1,4 @@
+import Pagination from "core/components/Pagination";
 import { Genre } from "core/models/Genre";
 import { MovieResponse } from "core/models/Movie";
 import { makePrivateRequest } from "core/utils/requests";
@@ -54,6 +55,15 @@ const MoviesList = () => {
           </Link>
         )}
       </div>
+
+      {moviesReponse && (
+        <Pagination
+          totalPages={moviesReponse.totalPages}
+          activePage={activePage}
+          onChange={page => setActivePage(page)}
+        />
+      )}
+
     </div>
   )
 }

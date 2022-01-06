@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Button from 'core/components/Button';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 type Props = {
   handleInputReview: (input: string) => void;
